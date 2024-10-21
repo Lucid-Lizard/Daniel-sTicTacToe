@@ -91,11 +91,17 @@ int main()
             if(winner > 0){
                 MyGrid.Display();
                 cout << "Player " << winner << " wins!" << endl;
-                active = false;
+                cout << "Would you like to play again? (Y or N)" << endl;
+                char input;
+                cin >> input;
+                active = (input == 'Y');
             } else if(winner < 0) {
                 MyGrid.Display();
                 cout << "Catgame! Nobody wins" << endl;
-                active = false;
+                cout << "Would you like to play again? (Y or N)" << endl;
+                char input;
+                cin >> input;
+                active = (input == 'Y');
             }
             
             turn++;
