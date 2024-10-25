@@ -102,6 +102,8 @@ int main()
                 char input;
                 cin >> input;
                 active = (input == 'Y');
+                MyGrid.Initialize();
+                turn = -1; // We do negative 1 because the turn++ right after would set it to 0;
             }
             
             turn++;
